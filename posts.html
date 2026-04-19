@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Posts | Research by Trivikram</title>
-  <meta name="description" content="Posts on financial crime, risk, compliance architecture, and AI implementation." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap" rel="stylesheet" />
+  <title>Posts | Financial Systems Insights</title>
+  <meta name="description" content="Posts on financial crime, risk, compliance architecture, payments, and AI implementation." />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="index.html">Research by Trivikram</a>
+      <a class="brand" href="index.html"><span class="brand-mark"></span><span>Financial Systems Insights</span></a>
       <nav>
         <a href="index.html">Home</a>
         <a href="posts.html">Posts</a>
@@ -24,27 +21,42 @@
 
   <main class="wrap section">
     <div class="section-head">
-      <h1>Posts</h1>
+      <div>
+        <h1 style="margin:0;font-size:38px;letter-spacing:-.04em">Posts</h1>
+        <p style="margin:8px 0 0;color:var(--muted)">Implementation-focused research and blueprint articles.</p>
+      </div>
     </div>
 
     <div class="stack">
-      <article class="card list-post">
-        <p class="post-tag">Featured</p>
-        <h2><a href="posts/financial-crime-framework-implementation.html">Financial Crime Framework Implementation: From Regulation to Execution</a></h2>
+      <article class="card post-card">
+        <div class="meta">Featured</div>
+        <h3><a href="posts/financial-crime-framework-implementation.html">Financial Crime Framework Implementation: From Regulation to Execution</a></h3>
         <p>A practical implementation guide for organizations designing financial crime control frameworks.</p>
       </article>
 
-      <article class="card list-post">
-        <p class="post-tag">Coming Soon</p>
-        <h2><a href="posts/coming-soon.html">Research roadmap and upcoming topics</a></h2>
-        <p>A simple post listing the next areas of research and content direction.</p>
+      <article class="card post-card">
+        <div class="meta">New</div>
+        <h3><a href="posts/aml-architecture-realtime-vs-batch.html">AML Architecture: Real-Time vs Batch</a></h3>
+        <p>How APIs, event streams, and batch pipelines should work together inside an AML ecosystem.</p>
+      </article>
+
+      <article class="card post-card">
+        <div class="meta">New</div>
+        <h3><a href="posts/ownership-model-financial-crime.html">Who Owns What in Financial Crime Programs?</a></h3>
+        <p>A practical view of responsibility across Compliance, Fraud Ops, Risk, Data Engineering, and Technology.</p>
+      </article>
+
+      <article class="card post-card">
+        <div class="meta">New</div>
+        <h3><a href="posts/ai-in-regulated-workflows.html">Where AI Fits in Regulated Workflows</a></h3>
+        <p>From onboarding to case management, where AI can support execution and where human review remains essential.</p>
       </article>
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="footer">
     <div class="wrap footer-inner">
-      <p>&copy; 2026 Research by Trivikram</p>
+      <p>© 2026 Financial Systems Insights</p>
     </div>
   </footer>
 </body>

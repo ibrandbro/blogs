@@ -1,20 +1,15 @@
-Personal blog site for GitHub Pages
+Premium blog site for GitHub Pages
 
-Files included:
-- index.html
-- posts.html
-- about.html
-- posts/financial-crime-framework-implementation.html
-- posts/coming-soon.html
-- assets/styles.css
+What is included:
+- Premium homepage redesign
+- Author section with photo placeholder at assets/author-placeholder.png
+- Professional styling and subtle animations
+- Featured demo section
+- Posts page
+- About page
+- 4 article pages including your next 3 strategic posts
 
-How to publish on GitHub Pages:
-1. Create a new public repository on GitHub.
-2. Upload all files and folders exactly as provided.
-3. Go to Settings > Pages.
-4. Set Source to Deploy from a branch.
-5. Choose main branch and /(root).
-6. Save and wait for the site URL.
-
-Suggested repo name:
-research-by-trivikram
+How to personalize:
+1. Replace assets/author-placeholder.png with your own photo.
+2. Edit the author paragraph in index.html if needed.
+3. Upload all files to your GitHub Pages repo.
