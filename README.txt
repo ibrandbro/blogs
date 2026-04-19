@@ -1,1 +1,1 @@
-Premium editorial refresh with cleaner typography and spacing.
+Updated branding copy and broader positioning for your site.
