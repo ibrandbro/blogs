@@ -1,1 +1,131 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Financial Systems Insights</title><meta name="description" content="From ideas to execution — systems, architecture, and real-world implementation." /><link rel="stylesheet" href="assets/styles.css" /></head><body><div class="page"><div class="layout"><aside class="left-rail"><h1 class="brand">Financial Systems Insights</h1><div class="author-photo"><img src="assets/author-placeholder.png" alt="Author photo" /></div><p class="about">I explore how complex ideas turn into real-world systems.<br><br>My work focuses on implementation — how organizations design workflows, data, architecture, and operating models to execute at scale.<br><br>This site is a collection of research, system thinking, and practical insights across industries.</p><div class="socials"><a href="#" class="social s-fb">f</a><a href="#" class="social s-pi">p</a><a href="#" class="social s-x">x</a><a href="#" class="social s-in">in</a></div><div class="rail-title">Latest research</div><ul class="latest-list"><li><a href="posts/financial-crime-framework-implementation.html">Financial Crime Framework Implementation: From Regulation to Execution</a></li><li><a href="posts/aml-architecture-realtime-vs-batch.html">AML Architecture: Real-Time vs Batch</a></li><li><a href="posts/ownership-model-financial-crime.html">Who Owns What in Financial Crime Programs?</a></li><li><a href="posts/ai-in-regulated-workflows.html">Where AI Fits in Regulated Workflows</a></li></ul></aside><main class="right-content"><nav class="top-nav"><a href="index.html">Home</a><a href="posts.html">Posts</a><a href="about.html">About</a></nav><article class="post"><div class="kicker">Featured work</div><h2><a href="https://ibrandbro.github.io/financial-crime-framework-demo/" target="_blank">Interactive Financial Crime Framework (US Market)</a></h2><p>The Interactive Financial Crime Framework (US Market) is designed as a practical implementation blueprint for how organizations can operationalize regulatory expectations across financial crime controls. It connects KYC/CIP, CDD, sanctions, PEP, and transaction monitoring into a structured workflow that reflects how real-world institutions operate.</p><p>Beyond compliance requirements, the framework focuses on execution — defining what data is required at each step, which systems provide it, and how ownership is distributed across Compliance, Risk, Fraud Operations, Data Engineering, and Technology. It also incorporates architectural thinking such as real-time vs batch processing, APIs, and event-driven pipelines.</p><a class="read-more" href="https://ibrandbro.github.io/financial-crime-framework-demo/" target="_blank">&gt;&gt; Open live demo.</a></article><div class="separator"></div><article class="post"><div class="kicker">Implementation Blueprint</div><h2><a href="posts/financial-crime-framework-implementation.html">Financial Crime Framework Implementation: From Regulation to Execution</a></h2><p>A practical view of how organizations can design customer intake, KYC/CIP, CDD, beneficial ownership, sanctions, PEP, monitoring, case management, and SAR escalation as an implementation framework.</p><a class="read-more" href="posts/financial-crime-framework-implementation.html">&gt;&gt; Read more.</a></article><div class="separator"></div><article class="post"><div class="kicker">Architecture</div><h2><a href="posts/aml-architecture-realtime-vs-batch.html">AML Architecture: Real-Time vs Batch</a></h2><p>Where APIs, Kafka, event streams, data lakes, and batch platforms fit into AML onboarding, screening, monitoring, and investigation workflows.</p><a class="read-more" href="posts/aml-architecture-realtime-vs-batch.html">&gt;&gt; Read more.</a></article><div class="separator"></div><article class="post"><div class="kicker">Operating Model</div><h2><a href="posts/ownership-model-financial-crime.html">Who Owns What in Financial Crime Programs?</a></h2><p>A practical ownership model across Compliance, Fraud Ops, Risk, Data Engineering, and Technology, and why weak ownership often leads to weak control execution.</p><a class="read-more" href="posts/ownership-model-financial-crime.html">&gt;&gt; Read more.</a></article><div class="separator"></div><article class="post"><div class="kicker">AI in Regulated Workflows</div><h2><a href="posts/ai-in-regulated-workflows.html">Where AI Fits in Regulated Workflows</a></h2><p>Where AI can actually add value in regulated workflows — including document extraction, anomaly surfacing, case summarization, and evidence preparation — without replacing critical human review.</p><a class="read-more" href="posts/ai-in-regulated-workflows.html">&gt;&gt; Read more.</a></article></main></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Systems Insights</title>
+  <meta name="description" content="From ideas to execution — systems, architecture, and real-world implementation." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div class="page">
+  <div class="layout">
+
+    <!-- LEFT RAIL -->
+    <aside class="left-rail">
+      <div>
+        <a href="index.html" class="brand">Financial<br><span>Systems Insights</span></a>
+        <div class="brand-rule"></div>
+      </div>
+
+      <div class="author-photo">
+        <img src="assets/author-placeholder.png" alt="Author photo" />
+      </div>
+
+      <p class="about">
+        I explore how complex ideas turn into real-world systems.<br><br>
+        My work focuses on implementation — how organizations design workflows,
+        data, architecture, and operating models to execute at scale.
+      </p>
+
+      <div class="socials">
+        <a href="#" class="social">f</a>
+        <a href="#" class="social">p</a>
+        <a href="#" class="social">x</a>
+        <a href="#" class="social">in</a>
+      </div>
+
+      <div>
+        <div class="rail-section-title">Latest research</div>
+        <ul class="latest-list" style="margin-top:16px">
+          <li><a href="posts/financial-crime-framework-implementation.html">Financial Crime Framework Implementation</a></li>
+          <li><a href="posts/aml-architecture-realtime-vs-batch.html">AML Architecture: Real-Time vs Batch</a></li>
+          <li><a href="posts/ownership-model-financial-crime.html">Who Owns What in Financial Crime Programs?</a></li>
+          <li><a href="posts/ai-in-regulated-workflows.html">Where AI Fits in Regulated Workflows</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="right-content">
+      <nav class="top-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="about.html">About</a>
+        <div class="top-nav-spacer"></div>
+      </nav>
+
+      <!-- Featured Hero -->
+      <section class="post-hero">
+        <div class="kicker">Featured work</div>
+        <h2>
+          <a href="https://ibrandbro.github.io/financial-crime-framework-demo/" target="_blank">
+            Interactive Financial Crime Framework<br>(US Market)
+          </a>
+        </h2>
+        <p>
+          The Interactive Financial Crime Framework is designed as a practical implementation
+          blueprint for how organizations can operationalize regulatory expectations across
+          financial crime controls. It connects KYC/CIP, CDD, sanctions, PEP, and transaction
+          monitoring into a structured workflow that reflects how real-world institutions operate.
+        </p>
+        <p>
+          Beyond compliance requirements, the framework focuses on execution — defining what data
+          is required at each step, which systems provide it, and how ownership is distributed
+          across Compliance, Risk, Fraud Operations, Data Engineering, and Technology.
+        </p>
+        <a class="read-more" href="https://ibrandbro.github.io/financial-crime-framework-demo/" target="_blank" style="margin-top:8px;display:inline-flex">Open live demo</a>
+      </section>
+
+      <!-- Post Cards -->
+      <div class="section-label">Recent articles</div>
+
+      <div class="posts-grid">
+
+        <a href="posts/financial-crime-framework-implementation.html" class="post-card" style="text-decoration:none">
+          <div>
+            <div class="kicker">Implementation Blueprint</div>
+            <div class="post-card-title">Financial Crime Framework Implementation: From Regulation to Execution</div>
+            <div class="post-card-excerpt">A practical view of how organizations can design customer intake, KYC/CIP, CDD, beneficial ownership, sanctions, PEP, monitoring, case management, and SAR escalation as an implementation framework.</div>
+            <span class="read-more">Read article</span>
+          </div>
+          <div class="post-card-meta">AML · Compliance</div>
+        </a>
+
+        <a href="posts/aml-architecture-realtime-vs-batch.html" class="post-card" style="text-decoration:none">
+          <div>
+            <div class="kicker">Architecture</div>
+            <div class="post-card-title">AML Architecture: Real-Time vs Batch</div>
+            <div class="post-card-excerpt">Where APIs, Kafka, event streams, data lakes, and batch platforms fit into AML onboarding, screening, monitoring, and investigation workflows.</div>
+            <span class="read-more">Read article</span>
+          </div>
+          <div class="post-card-meta">Architecture · Data</div>
+        </a>
+
+        <a href="posts/ownership-model-financial-crime.html" class="post-card" style="text-decoration:none">
+          <div>
+            <div class="kicker">Operating Model</div>
+            <div class="post-card-title">Who Owns What in Financial Crime Programs?</div>
+            <div class="post-card-excerpt">A practical ownership model across Compliance, Fraud Ops, Risk, Data Engineering, and Technology — and why weak ownership often leads to weak control execution.</div>
+            <span class="read-more">Read article</span>
+          </div>
+          <div class="post-card-meta">Operations · Risk</div>
+        </a>
+
+        <a href="posts/ai-in-regulated-workflows.html" class="post-card" style="text-decoration:none">
+          <div>
+            <div class="kicker">AI in Regulated Workflows</div>
+            <div class="post-card-title">Where AI Fits in Regulated Workflows</div>
+            <div class="post-card-excerpt">Where AI can actually add value in regulated workflows — including document extraction, anomaly surfacing, case summarization, and evidence preparation — without replacing critical human review.</div>
+            <span class="read-more">Read article</span>
+          </div>
+          <div class="post-card-meta">AI · Compliance</div>
+        </a>
+
+      </div>
+    </main>
+
+  </div>
+</div>
+</body>
+</html>

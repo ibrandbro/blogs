@@ -1,1 +1,47 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" href="../assets/styles.css" /></head><body><div class="page"><div class="layout"><aside class="left-rail"><h1 class="brand">Financial Systems Insights</h1><div class="author-photo"><img src="../assets/author-placeholder.png" alt="Author photo" /></div><p class="about">Research, system thinking, and practical implementation insights across industries.</p></aside><main class="right-content"><nav class="top-nav"><a href="../index.html">Home</a><a href="../posts.html">Posts</a><a href="../about.html">About</a></nav><article class="post-page"><div class="kicker">Architecture</div><h1>AML Architecture: Real-Time vs Batch</h1><p>Modern AML systems require a hybrid architecture that balances real-time responsiveness with large-scale data processing. Real-time components are critical for onboarding decisions, sanctions screening, and high-risk transaction blocking, where immediate action is required. At the same time, batch processing plays a key role in historical analysis, feature generation, model training, and large-scale transaction monitoring, where performance and data volume are primary concerns.</p><p>The challenge is not choosing between real-time and batch, but designing a system where both coexist effectively. This involves defining clear boundaries for APIs, event-driven pipelines such as Kafka, and data platforms like data lakes or warehouses. Real-time systems handle decision points, while batch systems provide context and depth, ensuring both speed and accuracy in risk detection.</p><h2>Where Things Break in Real World</h2><p>Many organizations either over-invest in real-time systems or rely too heavily on batch processing. Real-time-only systems often lack historical context, leading to poor decision quality, while batch-heavy systems introduce delays in detecting high-risk activity. This imbalance creates operational inefficiencies and increases exposure to financial crime risks.</p><p>For example, a suspicious transaction may occur in real time, but if the system depends on overnight batch scoring, the alert is delayed. Conversely, real-time decisions without historical patterns may incorrectly approve high-risk behavior. These gaps highlight the need for a balanced architecture.</p><div class="diagram"><div class="diagram-title">Architecture pattern</div><div class="flow"><span class="node">Customer / Merchant</span><span class="arrow">→</span><span class="node">API Layer</span><span class="arrow">→</span><span class="node">Real-Time Decision Engine</span><span class="arrow">→</span><span class="node">Alert / Block</span></div><div class="flow" style="margin-top:12px"><span class="node">Kafka / Events</span><span class="arrow">→</span><span class="node">Data Lake</span><span class="arrow">→</span><span class="node">Batch Scoring</span><span class="arrow">→</span><span class="node">Monitoring Alerts</span></div></div><h2>Implementation Approach</h2><p>Organizations should define which decisions require real-time execution and which require historical analysis. APIs should be used for immediate decision points, while event-driven pipelines ensure data is continuously captured and processed for deeper insights.</p><p>A unified architecture connects real-time and batch layers through shared data models and consistent validation logic. This allows organizations to act quickly while maintaining analytical depth and regulatory compliance.</p><div class="two-col"><div class="callout"><h3>End Goal</h3><p>Build a system that can detect and respond to risk in real time while continuously learning from historical data. This ensures both speed and accuracy in financial crime detection.</p></div><div class="callout"><h3>Conclusion</h3><p>A successful AML architecture is not about choosing real-time or batch — it is about integrating both into a cohesive system.</p></div></div></article></main></div></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AML Architecture: Real-Time vs Batch | Financial Systems Insights</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+<div class="page">
+  <div class="layout">
+    <aside class="left-rail">
+      <div>
+        <a href="../index.html" class="brand">Financial<br><span>Systems Insights</span></a>
+        <div class="brand-rule"></div>
+      </div>
+      <div class="author-photo">
+        <img src="../assets/author-placeholder.png" alt="Author photo" />
+      </div>
+      <p class="about">Research, system thinking, and practical implementation insights across industries.</p>
+      <div class="socials">
+        <a href="#" class="social">f</a>
+        <a href="#" class="social">p</a>
+        <a href="#" class="social">x</a>
+        <a href="#" class="social">in</a>
+      </div>
+    </aside>
+    <main class="right-content">
+      <nav class="top-nav">
+        <a href="../index.html">Home</a>
+        <a href="../posts.html">Posts</a>
+        <a href="../about.html">About</a>
+        <div class="top-nav-spacer"></div>
+      </nav>
+      <article class="post-page">
+        <div class="post-header">
+          <div class="kicker">Architecture</div>
+          <h1>AML Architecture: Real-Time vs Batch</h1>
+          <div class="post-byline">Financial Systems Insights &nbsp;·&nbsp; Architecture · Data</div>
+        </div>
+        <p>Modern AML systems require a hybrid architecture that balances real-time responsiveness with large-scale data processing. Real-time components are critical for onboarding decisions, sanctions screening, and high-risk transaction blocking, where immediate action is required. At the same time, batch processing plays a key role in historical analysis, feature generation, model training, and large-scale transaction monitoring, where performance and data volume are primary concerns.</p><p>The challenge is not choosing between real-time and batch, but designing a system where both coexist effectively. This involves defining clear boundaries for APIs, event-driven pipelines such as Kafka, and data platforms like data lakes or warehouses. Real-time systems handle decision points, while batch systems provide context and depth, ensuring both speed and accuracy in risk detection.</p><h2>Where Things Break in Real World</h2><p>Many organizations either over-invest in real-time systems or rely too heavily on batch processing. Real-time-only systems often lack historical context, leading to poor decision quality, while batch-heavy systems introduce delays in detecting high-risk activity. This imbalance creates operational inefficiencies and increases exposure to financial crime risks.</p><p>For example, a suspicious transaction may occur in real time, but if the system depends on overnight batch scoring, the alert is delayed. Conversely, real-time decisions without historical patterns may incorrectly approve high-risk behavior. These gaps highlight the need for a balanced architecture.</p><div class="diagram"><div class="diagram-title">Architecture pattern</div><div class="flow"><span class="node">Customer / Merchant</span><span class="arrow">→</span><span class="node">API Layer</span><span class="arrow">→</span><span class="node">Real-Time Decision Engine</span><span class="arrow">→</span><span class="node">Alert / Block</span></div><div class="flow" style="margin-top:12px"><span class="node">Kafka / Events</span><span class="arrow">→</span><span class="node">Data Lake</span><span class="arrow">→</span><span class="node">Batch Scoring</span><span class="arrow">→</span><span class="node">Monitoring Alerts</span></div></div><h2>Implementation Approach</h2><p>Organizations should define which decisions require real-time execution and which require historical analysis. APIs should be used for immediate decision points, while event-driven pipelines ensure data is continuously captured and processed for deeper insights.</p><p>A unified architecture connects real-time and batch layers through shared data models and consistent validation logic. This allows organizations to act quickly while maintaining analytical depth and regulatory compliance.</p><div class="two-col"><div class="callout"><h3>End Goal</h3><p>Build a system that can detect and respond to risk in real time while continuously learning from historical data. This ensures both speed and accuracy in financial crime detection.</p></div><div class="callout"><h3>Conclusion</h3><p>A successful AML architecture is not about choosing real-time or batch — it is about integrating both into a cohesive system.</p></div></div>
+      </article>
+    </main>
+  </div>
+</div>
+</body>
+</html>
