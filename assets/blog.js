@@ -158,14 +158,24 @@ if (blogBtn) blogBtn.addEventListener('click', renderArticle);
 
 /* ── Theme toggle ───────────────────────────────────────── */
 (function() {
-  var root  = document.documentElement;
-  var saved = localStorage.getItem('theme') || 'light';
+  var root   = document.documentElement;
+  var saved  = localStorage.getItem('theme') || 'light';
   root.setAttribute('data-theme', saved);
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    var icon  = document.getElementById('toggle-icon');
+    var label = document.getElementById('toggle-label');
+    if (icon)  icon.textContent  = theme === 'dark' ? '☀' : '☾';
+    if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+  }
+
+  applyTheme(saved);
+
   var toggle = document.getElementById('theme-toggle');
   if (toggle) toggle.addEventListener('click', function() {
-    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
 })();
 
