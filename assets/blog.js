@@ -2,7 +2,7 @@
 var ARTICLE = {
   kicker: 'Financial Crime',
   title:  'A Complete Guide to Financial Crime Implementation',
-  byline: 'Systems & Insights &nbsp;·&nbsp; AML &nbsp;·&nbsp; Compliance &nbsp;·&nbsp; Architecture &nbsp;·&nbsp; AI',
+  byline: 'Systems & Insights &nbsp;·&nbsp; AML &nbsp;·&nbsp; Compliance &nbsp;·&nbsp; Architecture &nbsp;·&nbsp; AI<a href="https://ibrandbro.github.io/financial-crime-framework-demo/" target="_blank" rel="noopener" class="byline-demo">Live Demo &#8599;</a>',
   body: [
 
     /* ── INTRODUCTION ── */

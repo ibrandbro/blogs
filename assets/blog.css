@@ -278,6 +278,21 @@ a { text-decoration:none; color:inherit; }
   font-family:var(--sans); font-size:11px; font-weight:500;
   letter-spacing:.08em; color:var(--text-3);
   margin-bottom:36px;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:8px;
+}
+.byline-demo {
+  font-family:var(--sans); font-size:11px; font-weight:600;
+  letter-spacing:.08em; color:var(--accent);
+  border:1px solid var(--node-bd);
+  background:var(--node-bg);
+  padding:4px 12px; border-radius:3px;
+  transition:background .2s, color .2s;
+  white-space:nowrap;
+  margin-left:auto;
+}
+.byline-demo:hover {
+  background:var(--accent); color:#fff;
 }
 .article-body p {
   font-size:17px; line-height:1.87;
