@@ -130,7 +130,7 @@ var VIEWS = {
 /* ── Render ─────────────────────────────────────────────── */
 var pane    = document.getElementById('content-pane');
 var navBtns = document.querySelectorAll('.nav-btn');
-var blogBtn = document.querySelector('.blog-btn');
+var blogBtn = document.querySelector('.blog-btn[data-article="main"]');
 var bar     = document.getElementById('progress');
 
 function setProgress(pct) { if (bar) bar.style.width = (pct || 0) + '%'; }
@@ -159,6 +159,24 @@ function renderArticle() {
   bindScroll();
 }
 
+function renderComingSoon() {
+  pane.innerHTML =
+    '<div class="fade-in coming-soon-pane">' +
+      '<div class="cs-label">Coming Soon</div>' +
+      '<div class="cs-title">Fraud and AML Are Converging:<br>Why Separate Systems No Longer Work</div>' +
+      '<p class="cs-desc">The next article explores why treating fraud and AML as separate disciplines is creating dangerous blind spots — and what a converged, integrated approach looks like in practice.</p>' +
+      '<a href="#" class="cs-back" onclick="renderView(\'home\');return false;">&#8592; Back to home</a>' +
+    '</div>';
+  window.scrollTo(0, 0);
+  setProgress(0);
+  navBtns.forEach(function(b) { b.classList.remove('active'); });
+  document.querySelectorAll('.blog-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.article === 'coming-soon');
+  });
+  if (blogBtn) blogBtn.classList.remove('active');
+  bindScroll();
+}
+
 function renderView(key) {
   pane.innerHTML = VIEWS[key]();
   window.scrollTo(0, 0);
@@ -176,6 +194,9 @@ navBtns.forEach(function(b) {
   b.addEventListener('click', function() { renderView(b.dataset.view); });
 });
 if (blogBtn) blogBtn.addEventListener('click', renderArticle);
+
+var comingSoonBtn = document.querySelector('.blog-btn[data-article="coming-soon"]');
+if (comingSoonBtn) comingSoonBtn.addEventListener('click', renderComingSoon);
 
 /* ── Theme toggle ───────────────────────────────────────── */
 (function() {
