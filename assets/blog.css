@@ -378,6 +378,140 @@ a { text-decoration:none; color:inherit; }
   transition:border-color .3s;
 }
 
+
+/* ── Example cards (real-world cases) ──────────────────── */
+.examples-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0;
+}
+.example-card {
+  border: 1px solid var(--line-s);
+  border-radius: 6px;
+  background: var(--bg-card);
+  overflow: hidden;
+  transition: background .3s, border-color .3s;
+}
+.example-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px 14px;
+  border-bottom: 1px solid var(--line);
+}
+.example-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.example-card-title {
+  font-family: var(--sans);
+  font-size: 14px; font-weight: 700;
+  color: var(--text);
+  letter-spacing: .01em;
+}
+.example-card-body {
+  padding: 14px 20px 16px;
+}
+.example-card-body ul {
+  list-style: none;
+  padding: 0; margin: 0 0 14px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.example-card-body ul li {
+  font-family: var(--sans);
+  font-size: 14px; line-height: 1.65;
+  color: var(--text-2);
+  padding-left: 16px;
+  position: relative;
+}
+.example-card-body ul li::before {
+  content: '–';
+  position: absolute; left: 0;
+  color: var(--accent);
+}
+.example-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--node-bg);
+  border-radius: 4px;
+  transition: background .3s;
+}
+.example-insight-label {
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent);
+  white-space: nowrap;
+  padding-top: 1px;
+}
+.example-insight p {
+  font-family: var(--sans);
+  font-size: 13px !important;
+  line-height: 1.65 !important;
+  color: var(--text-2) !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+/* ── Shift callout (industry shift block) ───────────────── */
+.shift-block {
+  margin: 32px 0;
+  padding: 22px 24px;
+  border: 1px solid var(--line-s);
+  border-radius: 6px;
+  background: var(--bg-card);
+  transition: background .3s, border-color .3s;
+}
+.shift-block-label {
+  font-family: var(--sans);
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 12px;
+}
+.shift-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: var(--text-2);
+}
+.shift-old {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--bg);
+  font-style: italic;
+  color: var(--text-3);
+  transition: background .3s;
+}
+.shift-arrow {
+  font-size: 20px;
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.shift-new {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid rgba(176,120,40,.35);
+  border-radius: 4px;
+  background: var(--node-bg);
+  font-weight: 600;
+  color: var(--text);
+  transition: background .3s;
+}
+
 /* ── RESPONSIVE ─────────────────────────────────────────── */
 @media(max-width:860px){
   .shell { grid-template-columns:1fr; }
